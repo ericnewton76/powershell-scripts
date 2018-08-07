@@ -3,7 +3,7 @@
 ```powershell
 if ($env:APPVEYOR_REPO_TAG -eq "true") {
 
-  $verProps = Parse-SemVer $env:APPVEYOR_REPO_TAG_NAME
+  $verProps = Parse-SemVerTag $env:APPVEYOR_REPO_TAG_NAME
 
   $env:APPVEYOR_BUILD_SEMVER = $verProps.SemVer
   $env:APPVEYOR_BUILD_VERSION = $verProps.Version
